@@ -13,5 +13,13 @@
   "license": "MIT",
   "dependencies": {
     "broccoli-autoprefixer": "~0.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kimroen/ember-cli-autoprefixer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kimroen/ember-cli-autoprefixer/issues"
+  },
+  "homepage": "https://github.com/kimroen/ember-cli-autoprefixer"
 }
