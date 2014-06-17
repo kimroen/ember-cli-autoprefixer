@@ -1,0 +1,17 @@
+{
+  "name": "ember-cli-autoprefixer",
+  "version": "0.0.1",
+  "description": "Process styles in an ember-cli application using Autoprefixer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ember-cli-addon"
+  ],
+  "author": "Kim Røen",
+  "license": "MIT",
+  "dependencies": {
+    "broccoli-autoprefixer": "~0.2.0"
+  }
+}
