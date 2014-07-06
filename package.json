@@ -7,8 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "autoprefixer",
+    "css",
+    "prefix",
+    "preprocess"
   ],
+  "ember-addon": {
+    "before": "broccoli-asset-rev"
+  },
   "author": "Kim Røen",
   "license": "MIT",
   "dependencies": {
