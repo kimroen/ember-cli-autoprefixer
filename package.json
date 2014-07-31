@@ -19,7 +19,7 @@
   "author": "Kim Røen",
   "license": "MIT",
   "dependencies": {
-    "broccoli-autoprefixer": "~0.2.0"
+    "broccoli-autoprefixer": "^0.3.0"
   },
   "repository": {
     "type": "git",
