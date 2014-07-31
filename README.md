@@ -25,6 +25,8 @@ var app = new EmberApp({
 
 This would prefix styles as required by the two latest version of ios.
 
+Other options, such as [visual cascade](https://github.com/ai/autoprefixer#visual-cascade) would also go here along with `browsers`.
+
 The default value for `browsers` are `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`.
 
 You can read more about this setting [over on the autoprefixer page](https://github.com/ai/autoprefixer#browsers).
