@@ -27,6 +27,8 @@ var app = new EmberApp({
 This would prefix styles as required by the two latest version of ios, and disable the cascade (see below).
 The default value for `browsers` are `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`.
 
+You can disable autoprefixer by passing in `enabled: false`.
+
 Other options, such as [cascade](https://github.com/ai/autoprefixer#visual-cascade) and [sourcemap](https://github.com/sindresorhus/broccoli-autoprefixer#sourcemap) would also go here along with `browsers`.
 
 You can read more about this setting and others [over on the autoprefixer page](https://github.com/ai/autoprefixer#browsers) and/or the [page for broccoli-autoprefixer](https://github.com/sindresorhus/broccoli-autoprefixer#options).
