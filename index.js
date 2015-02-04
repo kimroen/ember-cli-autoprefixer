@@ -1,32 +1,25 @@
+/* jshint node: true */
 'use strict';
 
-var path = require('path');
-var fs = require('fs');
 var autoprefixer = require('broccoli-autoprefixer');
-var defaults = require('lodash').defaults;
+var defaults     = require('lodash').defaults;
 
-function EmberCLIAutoprefixer(project) {
-  this.project = project;
-  this.name = 'Ember CLI Autoprefixer';
-}
+module.exports = {
+  name: 'ember-cli-autoprefixer',
+  included: function(app, parentAddon) {
+    this.app = app;
+    this.options = defaults(this.app.options.autoprefixer || {}, {
+      enabled: true
+    });
+    this.enabled = this.options.enabled;
+  },
+  postprocessTree: function(type, tree) {
+    var tree;
 
-EmberCLIAutoprefixer.prototype.postprocessTree = function (type, tree) {
-  if ((type === 'all' || type === 'styles') && this.enabled) {
-    tree = autoprefixer(tree, this.options);
+    if ((type === 'all' || type === 'styles') && this.enabled) {
+      tree = autoprefixer(tree, this.options);
+    }
+
+    return tree;
   }
-
-  return tree;
 };
-
-EmberCLIAutoprefixer.prototype.included = function included(app) {
-  this.app = app;
-  this.options = defaults(this.app.options.autoprefixer || {}, {
-    enabled: true
-  });
-  this.enabled = this.options.enabled;
-  delete this.options.enabled;
-};
-
-EmberCLIAutoprefixer.prototype.treeFor = function treeFor() {};
-
-module.exports = EmberCLIAutoprefixer;
