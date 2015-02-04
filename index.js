@@ -12,10 +12,9 @@ module.exports = {
       enabled: true
     });
     this.enabled = this.options.enabled;
+    delete this.options.enabled;
   },
   postprocessTree: function(type, tree) {
-    var tree;
-
     if ((type === 'all' || type === 'styles') && this.enabled) {
       tree = autoprefixer(tree, this.options);
     }
