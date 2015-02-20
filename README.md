@@ -1,4 +1,4 @@
-# Autoprefixer for Ember CLI
+# Autoprefixer for Ember CLI [![Build Status](https://travis-ci.org/kimroen/ember-cli-autoprefixer.svg?branch=master)](https://travis-ci.org/kimroen/ember-cli-autoprefixer)
 This addon runs the styles of your EmberCLI-project through
 `autoprefixer`.
 
