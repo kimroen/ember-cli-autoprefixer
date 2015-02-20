@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import { module, test } from 'qunit';
 import startApp from '../helpers/start-app';
 
 var application;
@@ -9,10 +10,10 @@ function getCssProperty(element, property) {
 }
 
 module('Acceptance: Application (Chrome Only)', {
-  setup: function() {
+  beforeEach: function() {
     application = startApp();
   },
-  teardown: function() {
+  afterEach: function() {
     Ember.run(application, 'destroy');
   }
 });
@@ -20,17 +21,17 @@ module('Acceptance: Application (Chrome Only)', {
 /**
   Execute this test in Chrome or PhantomJS for correct results
 */
-test('Verify correct webkit vendor prefix from autoprefixer', function() {
+test('Verify correct webkit vendor prefix from autoprefixer', function(assert) {
   var webkitUserSelect;
 
-  expect(3);
+  assert.expect(3);
 
   visit('/');
   andThen(function() {
     webkitUserSelect = getCssProperty('title', '-webkit-user-select');
 
-    equal(currentPath(), 'index', "On the index page");
-    equal(find('#title').length, 1, "Page contains a header title");
-    equal(webkitUserSelect, 'none', "");
+    assert.equal(currentPath(), 'index', "On the index page");
+    assert.equal(find('#title').length, 1, "Page contains a header title");
+    assert.equal(webkitUserSelect, 'none', "");
   });
 });
