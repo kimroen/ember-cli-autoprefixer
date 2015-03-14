@@ -2,7 +2,7 @@
 This addon runs the styles of your EmberCLI-project through
 `autoprefixer`.
 
-*NB*: This addon requires Ember CLI version `0.0.39` or newer.
+*NB*: This addon requires Ember CLI version `0.2.0` or newer.
 
 ## Install
 To install, run
@@ -28,6 +28,25 @@ This would prefix styles as required by the two latest version of ios, and disab
 The default value for `browsers` are `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`.
 
 You can disable autoprefixer by passing in `enabled: false`.
+
+# Advanced Usage
+
+By default ember-cli-autoprefixer runs the autoprefix process on the
+finished app tree as well as the `styles` tree.
+
+If you want to override the trees on which autoprefixer is run, you can
+use the `autoprefixedTrees` option
+
+```js
+var app = new EmberApp({
+  autoprefixer: {
+	autoprefixedTrees:['style'], // Only apply to the style tree
+    browsers: ['last 2 ios version'],
+    cascade: false
+  }
+});
+```
+
 
 Other options, such as [cascade](https://github.com/ai/autoprefixer#visual-cascade) and [sourcemap](https://github.com/sindresorhus/broccoli-autoprefixer#sourcemap) would also go here along with `browsers`.
 
