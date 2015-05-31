@@ -1,3 +1,9 @@
+## 0.4.0
++ Updated `broccoli-autoprefixer` dependency. It is now running
+  autoprefixer through PostCSS, which gets rid of the deprecation
+warnings.
+[#14](https://github.com/kimroen/ember-cli-autoprefixer/pull/14)
+
 ## 0.3.0
 + Added support for disabling autoprefixer. [#7](https://github.com/kimroen/ember-cli-autoprefixer/pull/7).
 + Updated version of `broccoli-autoprefixer`, which in turn updates Autoprefixer

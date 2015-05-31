@@ -2,13 +2,11 @@
 This addon runs the styles of your EmberCLI-project through
 `autoprefixer`.
 
-*NB*: This addon requires Ember CLI version `0.0.39` or newer.
-
 ## Install
 To install, run
 
 ```
-npm install ember-cli-autoprefixer --save-dev
+ember install ember-cli-autoprefixer
 ```
 
 ## Options
