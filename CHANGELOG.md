@@ -1,3 +1,7 @@
+### 0.4.1
++ Ignored the tmp-folder when publishing to npm
+  [#15](https://github.com/kimroen/ember-cli-autoprefixer/pull/16).
+
 ## 0.4.0
 + Updated `broccoli-autoprefixer` dependency. It is now running
   autoprefixer through PostCSS, which gets rid of the deprecation
