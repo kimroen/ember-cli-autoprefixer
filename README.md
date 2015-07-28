@@ -11,7 +11,7 @@ ember install ember-cli-autoprefixer
 
 ## Options
 You can configure what browsers to target and other options by specifying them in your
-`Brocfile.js`. An example:
+`Brocfile.js` or `ember-cli-build.js`. An example:
 
 ```js
 var app = new EmberApp({
