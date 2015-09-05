@@ -1,3 +1,6 @@
+## 0.5.0
++ Updated to the latest Autoprefixer (v6.0). See [their changelog](https://github.com/postcss/autoprefixer/releases/tag/6.0.0)
+
 ### 0.4.1
 + Ignored the tmp-folder when publishing to npm
   [#15](https://github.com/kimroen/ember-cli-autoprefixer/pull/16).
