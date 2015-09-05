@@ -11,3 +11,4 @@ tmp/
 bower.json
 Brocfile.js
 testem.json
+.jshintrc
