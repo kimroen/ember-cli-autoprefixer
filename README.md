@@ -23,13 +23,12 @@ var app = new EmberApp(defaults, {
 ```
 
 This would prefix styles as required by the two latest version of ios, and disable the cascade (see below).
-The default value for `browsers` are `['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']`.
 
 You can disable autoprefixer by passing in `enabled: false`.
 
 Other options would also go here along with `browsers`.
 
-You can read more about this setting and others [over on the autoprefixer page](https://github.com/postcss/autoprefixer#options).
+You can read more about these settings and others [over on the autoprefixer page](https://github.com/postcss/autoprefixer#options).
 
 ## References
 - [Autoprefixer](https://github.com/postcss/autoprefixer)
