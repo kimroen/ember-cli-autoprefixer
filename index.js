@@ -8,6 +8,11 @@ module.exports = {
   name: 'ember-cli-autoprefixer',
   included: function(app, parentAddon) {
     this.app = app;
+    
+    if (typeof app.import !== 'function' && app.app) {
+      this.app = app = app.app;
+    }
+    
     this._super.included.apply(this, arguments);
     this.options = defaults(this.app.options.autoprefixer || {}, {
       enabled: true
