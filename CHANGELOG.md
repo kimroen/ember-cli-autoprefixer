@@ -1,3 +1,8 @@
+## master
++ Updated structure to the newest ember-cli project structures [#22](https://github.com/kimroen/ember-cli-autoprefixer/pull/22) and [#29](https://github.com/kimroen/ember-cli-autoprefixer/pull/29)
++ Allow using this addon inside other addons directly [#27](https://github.com/kimroen/ember-cli-autoprefixer/pull/27)
++ Updated `lodash` and `broccoli-autoprefixer` dependencies [#29](https://github.com/kimroen/ember-cli-autoprefixer/pull/29)
+
 ## 0.5.0
 + Updated to the latest Autoprefixer (v6.0). See [their changelog](https://github.com/postcss/autoprefixer/releases/tag/6.0.0)
 
