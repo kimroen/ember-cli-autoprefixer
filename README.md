@@ -26,7 +26,7 @@ This would prefix styles as required by the two latest version of ios, and disab
 
 You can disable autoprefixer by passing in `enabled: false`.
 
-Other options would also go here along with `browsers`.
+Other options would also go here along with `browsers`, `enabled` and `cascade`.
 
 You can read more about these settings and others [over on the autoprefixer page](https://github.com/postcss/autoprefixer#options).
 
