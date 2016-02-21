@@ -53,7 +53,7 @@
   ],
   "dependencies": {
     "broccoli-autoprefixer": "^4.0.0",
-    "lodash": "^3.1.0",
+    "lodash": "^4.0.0",
     "ember-cli-babel": "^5.1.5"
   },
   "ember-addon": {
