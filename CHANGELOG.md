@@ -1,4 +1,6 @@
 ## master
+
+## 0.7.0
 + Support for the new `targets` feature coming in Ember-CLI 2.13. Read all about it [on @rwjblue's blog](http://rwjblue.com/2017/04/21/ember-cli-targets/). Thanks to [@rwjblue](https://github.com/rwjblue) and [@cibernox](https://github.com/cibernox) for working on it. [#34](https://github.com/kimroen/ember-cli-autoprefixer/pull/34)
 
 ## 0.6.0
