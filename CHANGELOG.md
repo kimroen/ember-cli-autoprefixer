@@ -1,3 +1,6 @@
+## master
++ Support for the new `targets` feature coming in Ember-CLI 2.13. Read all about it [on @rwjblue's blog](http://rwjblue.com/2017/04/21/ember-cli-targets/). Thanks to [@rwjblue](https://github.com/rwjblue) and [@cibernox](https://github.com/cibernox) for working on it. [#34](https://github.com/kimroen/ember-cli-autoprefixer/pull/34)
+
 ## 0.6.0
 + Updated structure to the newest ember-cli project structures [#22](https://github.com/kimroen/ember-cli-autoprefixer/pull/22) and [#29](https://github.com/kimroen/ember-cli-autoprefixer/pull/29)
 + Allow using this addon inside other addons directly [#27](https://github.com/kimroen/ember-cli-autoprefixer/pull/27)
