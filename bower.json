@@ -2,7 +2,6 @@
   "name": "ember-cli-autoprefixer",
   "dependencies": {
     "ember": "~2.8.1",
-    "ember-cli-shims": "~1.0.0",
     "ember-qunit-notifications": "0.1.0"
   }
 }
