@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-autoprefixer",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Process styles in an ember-cli application using Autoprefixer",
   "directories": {
     "doc": "doc",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/kimroen/ember-cli-autoprefixer",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "author": "Kim Røen",
   "license": "MIT",
@@ -53,7 +53,7 @@
     "preprocess"
   ],
   "dependencies": {
-    "broccoli-autoprefixer": "^4.1.0",
+    "broccoli-autoprefixer": "^5.0.0",
     "lodash": "^4.0.0"
   },
   "ember-addon": {
