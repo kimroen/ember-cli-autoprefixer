@@ -1,4 +1,6 @@
 ## master
++ Update `broccoli-autoprefixer` dependency. This also updates Autoprefixer to
+  v7.0.0 and requires Node version 4 or later. [#37](https://github.com/kimroen/ember-cli-autoprefixer/pull/37) and [#36](https://github.com/kimroen/ember-cli-autoprefixer/pull/36)
 
 ## 0.7.0
 + Support for the new `targets` feature coming in Ember-CLI 2.13. Read all about it [on @rwjblue's blog](http://rwjblue.com/2017/04/21/ember-cli-targets/). Thanks to [@rwjblue](https://github.com/rwjblue) and [@cibernox](https://github.com/cibernox) for working on it. [#34](https://github.com/kimroen/ember-cli-autoprefixer/pull/34)
