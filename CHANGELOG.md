@@ -1,4 +1,6 @@
 ## master
+
+## 0.8.0
 + Update `broccoli-autoprefixer` dependency. This also updates Autoprefixer to
   v7.0.0 and requires Node version 4 or later. [#37](https://github.com/kimroen/ember-cli-autoprefixer/pull/37) and [#36](https://github.com/kimroen/ember-cli-autoprefixer/pull/36)
 
