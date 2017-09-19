@@ -1,4 +1,7 @@
 ## master
+
+
+### 0.8.1
 + Fix issue with asset fingerprinting not taking autoprefixing into account [#39](https://github.com/kimroen/ember-cli-autoprefixer/pull/39)
 
 ## 0.8.0
