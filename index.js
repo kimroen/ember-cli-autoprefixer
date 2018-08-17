@@ -1,7 +1,7 @@
 /* jshint node: true */
 'use strict';
 
-var autoprefixer = require('broccoli-autoprefixer');
+var Autoprefixer = require('broccoli-autoprefixer');
 var defaults     = require('lodash/defaults');
 
 module.exports = {
@@ -27,7 +27,7 @@ module.exports = {
 
   postprocessTree: function(type, tree) {
     if ((type === 'all' || type === 'styles') && this.enabled) {
-      tree = autoprefixer(tree, this.options);
+      tree = new Autoprefixer(tree, this.options);
     }
 
     return tree;
