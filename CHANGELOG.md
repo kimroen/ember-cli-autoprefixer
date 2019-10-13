@@ -1,5 +1,11 @@
 ## master
 
+### 0.9.0
+
+[BREAKING] - Will trigger deprecation warnings from autoprefixer if you still use the `browsers` key in `ember-cli-build`.  To maintain this approach, change the key name to `overrideBrowserslist`.  The preferred approach is now to use a `.browserlistrc` file, or add a `browserslist` item to your `package.json`.  See https://github.com/browserslist/browserslist#readme for more information.
+
++ Upgrades Ember to 3.13
++ Upgrades broccoli-autoprofixer to `7.x`
 
 ### 0.8.1
 + Fix issue with asset fingerprinting not taking autoprefixing into account [#39](https://github.com/kimroen/ember-cli-autoprefixer/pull/39)
