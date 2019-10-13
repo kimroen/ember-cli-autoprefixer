@@ -1,12 +1,10 @@
-/* jshint node: true */
 'use strict';
 
 var autoprefixer = require('broccoli-autoprefixer');
 var defaults     = require('lodash/defaults');
 
 module.exports = {
-  name: 'ember-cli-autoprefixer',
-
+  name: require('./package').name,
   included: function(app) {
     this.app = app;
 
