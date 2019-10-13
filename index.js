@@ -1,6 +1,8 @@
 'use strict';
 
-var autoprefixer = require('broccoli-autoprefixer');
+const Autoprefixer = require('broccoli-autoprefixer');
+
+const treesToProcess = ['css', 'less', 'styl', 'scss', 'sass'];
 
 module.exports = {
   name: require('./package').name,
@@ -15,7 +17,6 @@ module.exports = {
 
     this.options = Object.assign(
       {
-        browsers: this.project.targets && this.project.targets.browsers,
         enabled: true
       },
       this.app.options.autoprefixer || {}
@@ -26,8 +27,8 @@ module.exports = {
   },
 
   postprocessTree: function(type, tree) {
-    if ((type === 'all' || type === 'styles') && this.enabled) {
-      tree = autoprefixer(tree, this.options);
+    if (this.enabled && treesToProcess.includes(type)) {
+      tree = new Autoprefixer(tree, this.options);
     }
 
     return tree;

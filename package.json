@@ -28,7 +28,7 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
-    "broccoli-autoprefixer": "^5.0.0",
+    "broccoli-autoprefixer": "^7.0.0",
     "ember-cli-htmlbars": "^4.0.0"
   },
   "devDependencies": {
