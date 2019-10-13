@@ -29,8 +29,7 @@
   },
   "dependencies": {
     "broccoli-autoprefixer": "^5.0.0",
-    "ember-cli-htmlbars": "^4.0.0",
-    "lodash": "^4.0.0"
+    "ember-cli-htmlbars": "^4.0.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.0.0",

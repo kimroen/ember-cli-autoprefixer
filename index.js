@@ -1,7 +1,6 @@
 'use strict';
 
 var autoprefixer = require('broccoli-autoprefixer');
-var defaults     = require('lodash/defaults');
 
 module.exports = {
   name: require('./package').name,
@@ -14,10 +13,13 @@ module.exports = {
 
     this._super.included.apply(this, arguments);
 
-    this.options = defaults(this.app.options.autoprefixer || {}, {
-      browsers: this.project.targets && this.project.targets.browsers,
-      enabled: true
-    });
+    this.options = Object.assign(
+      {
+        browsers: this.project.targets && this.project.targets.browsers,
+        enabled: true
+      },
+      this.app.options.autoprefixer || {}
+    );
 
     this.enabled = this.options.enabled;
     delete this.options.enabled;
