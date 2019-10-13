@@ -10,14 +10,15 @@ ember install ember-cli-autoprefixer
 ```
 
 ## Options
-By default ember-cli-autoprefixer passes your projects target browsers (in Ember CLI >= 2.13.0)
-to autoprefixer. However, you can manually configure what browsers to target and other options by
+Add the target browsers to your package.json as per https://github.com/browserslist/browserslist#readme or use a `.browserslistrc` file.
+
+You can manually configure what browsers to target and other options by
 specifying them in your `ember-cli-build.js` (or `Brocfile.js`). An example:
 
 ```js
 var app = new EmberApp(defaults, {
   autoprefixer: {
-    browsers: ['last 2 ios version'],
+    overrideBrowserslist: ['IE11'],
     cascade: false
   }
 });
@@ -27,7 +28,7 @@ This would prefix styles as required by the two latest version of ios, and disab
 
 You can disable Autoprefixer by passing in `enabled: false`.
 
-Other options would also go here along with `browsers`, `enabled` and `cascade`.
+Other options would also go here along with `overrideBrowserslist`, `enabled` and `cascade`.
 
 You can read more about these settings and others [over on the Autoprefixer page](https://github.com/postcss/autoprefixer#options).
 
