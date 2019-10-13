@@ -6,7 +6,6 @@ module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     autoprefixer: {
       enabled: true,
-      browsers: ['Chrome 43'],
       cascade: true
     }
   });
