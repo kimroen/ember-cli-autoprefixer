@@ -75,6 +75,9 @@
     "before": [
       "broccoli-asset-rev",
       "ember-cli-sri"
-    ]
+    ],
+    "versionCompatibility": {
+      "ember": ">3.8.0"
+    }
   }
 }
