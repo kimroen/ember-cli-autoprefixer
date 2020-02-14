@@ -1,12 +1,11 @@
-/* jshint node: true */
 'use strict';
 
-var autoprefixer = require('broccoli-autoprefixer');
-var defaults     = require('lodash/defaults');
+const Autoprefixer = require('broccoli-autoprefixer');
+
+const treesToProcess = ['css', 'less', 'styl', 'scss', 'sass'];
 
 module.exports = {
-  name: 'ember-cli-autoprefixer',
-
+  name: require('./package').name,
   included: function(app) {
     this.app = app;
 
@@ -16,18 +15,20 @@ module.exports = {
 
     this._super.included.apply(this, arguments);
 
-    this.options = defaults(this.app.options.autoprefixer || {}, {
-      browsers: this.project.targets && this.project.targets.browsers,
-      enabled: true
-    });
+    this.options = Object.assign(
+      {
+        enabled: true
+      },
+      this.app.options.autoprefixer || {}
+    );
 
     this.enabled = this.options.enabled;
     delete this.options.enabled;
   },
 
   postprocessTree: function(type, tree) {
-    if ((type === 'all' || type === 'styles') && this.enabled) {
-      tree = autoprefixer(tree, this.options);
+    if (this.enabled && treesToProcess.includes(type)) {
+      tree = new Autoprefixer(tree, this.options);
     }
 
     return tree;
