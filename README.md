@@ -32,6 +32,32 @@ Other options would also go here along with `overrideBrowserslist`, `enabled` an
 
 You can read more about these settings and others [over on the Autoprefixer page](https://github.com/postcss/autoprefixer#options).
 
+## Note on using with ember-cli-sass
+
+Autoprefixer doesn't play well with `.css.map` files, but it will work with embedded source maps. This means there are two options.
+
+If you want to disable CSS sourcemaps from ember-cli-sass update `ember-cli-build.js` to 
+
+```js
+    sassOptions: {
+      // This tells ember-cli-sass to avoid generating the sourcemap file (like vendor.css.map)
+      sourceMap: false
+    },
+```
+
+Alternatively, you may use embedded source maps.  So we tell `ember-cli-sass` to embed the sourcemaps and then turn on sourcemaps with autoprefixer which will update the embedded sourcemap after adding prefixes.
+
+```js
+    sassOptions: {
+      sourceMapEmbed: true
+    },
+    autoprefixer: {
+      enabled: true,
+      cascade: true,
+      sourcemap: true
+    }
+```
+
 ## References
 - [Autoprefixer](https://github.com/postcss/autoprefixer)
 - [broccoli-autoprefixer](https://github.com/sindresorhus/broccoli-autoprefixer)
