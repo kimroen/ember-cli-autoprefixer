@@ -17,6 +17,7 @@ module.exports = {
 
     this.options = Object.assign(
       {
+        overrideBrowserslist: this.project.targets && this.project.targets.browsers,
         enabled: true
       },
       this.app.options.autoprefixer || {}
