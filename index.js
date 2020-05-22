@@ -19,7 +19,7 @@ module.exports = {
     var browserOptions = {};
 
     var root = this.project.root;
-    var hasRCFile = !!fs.existsSync(`${root}/.browserlistrc`);
+    var hasRCFile = fs.existsSync(`${root}/.browserlistrc`);
     var hasPkgBrowserList = !!require('./package').browserslist;
 
     if (!hasRCFile && !hasPkgBrowserList) {
