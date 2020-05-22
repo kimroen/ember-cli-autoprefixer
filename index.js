@@ -19,8 +19,8 @@ module.exports = {
     var browserOptions = {};
 
     var root = this.project.root;
-    var hasRCFile = fs.existsSync(`${root}/.browserlistrc`);
-    var hasPkgBrowserList = !!require('./package').browserslist;
+    var hasRCFile = fs.existsSync(`${root}/.browserslistrc`);
+    var hasPkgBrowserList = !!this.project.pkg.browserslist;
 
     if (!hasRCFile && !hasPkgBrowserList) {
       var appOptions = this.app.options || {};
