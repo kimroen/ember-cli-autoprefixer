@@ -23,10 +23,8 @@ module.exports = {
     var hasPkgBrowserList = !!require('./package').browserslist;
 
     if (!hasRCFile && !hasPkgBrowserList) {
-      var addonOptions = this.app.options || {};
-      var config = addonOptions[this.name] || {};
-
-      browserOptions.overrideBrowsersList = config['autoprefixer'] && config['autoprefixer'].overrideBrowsersList;
+      var appOptions = this.app.options || {};
+      browserOptions.overrideBrowsersList = appOptions['autoprefixer'] && appOptions['autoprefixer'].overrideBrowsersList;
     }
 
     this.options = Object.assign(
