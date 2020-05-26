@@ -10,12 +10,14 @@ ember install ember-cli-autoprefixer
 ```
 
 ## Options
-Add the target browsers to your package.json as per https://github.com/browserslist/browserslist#readme or use a `.browserslistrc` file.
+This addon first consumes your browser list config from `config/targets.js`.  This is the browser list for Babel.
 
-You can manually configure what browsers to target and other options by
-specifying them in your `ember-cli-build.js` (or `Brocfile.js`). An example:
+You can manually configure what browsers to target for autoprefixer only.  Add the target browsers to your package.json
+as per https://github.com/browserslist/browserslist#readme, add a `.browserslistrc` file, or configure `overrideBrowsersList`
+in `ember-cli-build.js`.
 
 ```js
+// ember-cli-build.js
 var app = new EmberApp(defaults, {
   autoprefixer: {
     overrideBrowserslist: ['IE11'],

@@ -1,6 +1,7 @@
 'use strict';
 
 const Autoprefixer = require('broccoli-autoprefixer');
+const fs = require('fs');
 
 const treesToProcess = ['css', 'less', 'styl', 'scss', 'sass'];
 
@@ -15,10 +16,22 @@ module.exports = {
 
     this._super.included.apply(this, arguments);
 
+    var browserOptions = {};
+
+    var root = this.project.root;
+    var hasRCFile = fs.existsSync(`${root}/.browserslistrc`);
+    var hasPkgBrowserList = !!this.project.pkg.browserslist;
+
+    if (!hasRCFile && !hasPkgBrowserList) {
+      var appOptions = this.app.options || {};
+      browserOptions.overrideBrowsersList = appOptions['autoprefixer'] && appOptions['autoprefixer'].overrideBrowsersList;
+    }
+
     this.options = Object.assign(
       {
         enabled: true
       },
+      browserOptions,
       this.app.options.autoprefixer || {}
     );
 
