@@ -16,16 +16,20 @@ module.exports = {
 
     this._super.included.apply(this, arguments);
 
-    var browserOptions = {};
-
     var root = this.project.root;
     var hasRCFile = fs.existsSync(`${root}/.browserslistrc`);
     var hasPkgBrowserList = !!this.project.pkg.browserslist;
 
+    var browserOptions = {};
     if (!hasRCFile && !hasPkgBrowserList) {
       var appOptions = this.app.options || {};
-      browserOptions.overrideBrowsersList = appOptions['autoprefixer'] && appOptions['autoprefixer'].overrideBrowsersList;
+      if (appOptions['autoprefixer'] && appOptions['autoprefixer'].overrideBrowsersList) {
+        browserOptions.overrideBrowsersList = appOptions['autoprefixer'].overrideBrowsersList;
+      } else if (this.project.targets) {
+        browserOptions.overrideBrowsersList = this.project.targets.browsers;
+      }
     }
+
 
     this.options = Object.assign(
       {
