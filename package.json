@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-autoprefixer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Process styles in an ember-cli application using Autoprefixer",
   "keywords": [
     "ember-addon",
