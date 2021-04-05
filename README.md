@@ -51,6 +51,7 @@ Alternatively, you may use embedded source maps.  So we tell `ember-cli-sass` to
 
 ```js
   sassOptions: {
+    sourceMap: true,
     sourceMapEmbed: true
   },
   autoprefixer: {
@@ -68,6 +69,7 @@ Also note you can optionally disable in production!
   ...
 
   sassOptions: {
+    sourceMap: !envIsProduction,
     sourceMapEmbed: !envIsProduction
   },
   autoprefixer: {
