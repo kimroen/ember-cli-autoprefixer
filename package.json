@@ -61,7 +61,7 @@
     "qunit-dom": "^1.0.0"
   },
   "engines": {
-    "node": "10.* || >= 12"
+    "node": "12.* || 14.* || >= 16"
   },
   "bugs": {
     "url": "https://github.com/kimroen/ember-cli-autoprefixer/issues"
