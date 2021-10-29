@@ -24,7 +24,7 @@ jobs:
       - name: Lint
         run: npm run lint:js
       - name: Run Tests
-        run: npm run test:ember
+        run: npm run test
 
   floating:
     name: "Floating Dependencies"
