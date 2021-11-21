@@ -2,15 +2,14 @@
 
 ## Installation
 
-* `git clone <repository-url>`
-* `cd my-addon`
+* `git clone https://github.com/kimroen/ember-cli-autoprefixer.git`
+* `cd ember-cli-autoprefixer`
 * `npm install`
 
 ## Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `npm run lint`
+* `npm run lint:fix`
 
 ## Running tests
 
