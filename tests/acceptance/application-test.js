@@ -7,12 +7,12 @@ function getCssProperty(element, property) {
   return window.getComputedStyle(elem, null).getPropertyValue(property);
 }
 
-module('Acceptance: Application (Chrome Only)', function(hooks) {
+module('Acceptance: Application (Chrome Only)', function (hooks) {
   setupApplicationTest(hooks);
   /**
-  Execute this test in Chrome or PhantomJS for correct results
-*/
-  test('Verify correct webkit vendor prefix from autoprefixer', async function(assert) {
+    Execute this test in Chrome or PhantomJS for correct results
+  */
+  test('Verify correct webkit vendor prefix from autoprefixer', async function (assert) {
     var webkitUserSelect;
 
     assert.expect(3);
@@ -20,8 +20,8 @@ module('Acceptance: Application (Chrome Only)', function(hooks) {
     await visit('/');
     webkitUserSelect = getCssProperty('title', '-webkit-user-select');
 
-    assert.equal(currentRouteName(), 'index', 'On the index page');
+    assert.strictEqual(currentRouteName(), 'index', 'On the index page');
     assert.dom('#title').exists({ count: 1 });
-    assert.equal(webkitUserSelect, 'none', '');
+    assert.strictEqual(webkitUserSelect, 'none');
   });
 });

@@ -7,7 +7,7 @@ const treesToProcess = ['css', 'less', 'styl', 'scss', 'sass'];
 
 module.exports = {
   name: require('./package').name,
-  included: function(app) {
+  included: function (app) {
     this.app = app;
 
     if (typeof app.import !== 'function' && app.app) {
@@ -23,17 +23,20 @@ module.exports = {
     var browserOptions = {};
     if (!hasRCFile && !hasPkgBrowserList) {
       var appOptions = this.app.options || {};
-      if (appOptions['autoprefixer'] && appOptions['autoprefixer'].overrideBrowsersList) {
-        browserOptions.overrideBrowsersList = appOptions['autoprefixer'].overrideBrowsersList;
+      if (
+        appOptions['autoprefixer'] &&
+        appOptions['autoprefixer'].overrideBrowsersList
+      ) {
+        browserOptions.overrideBrowsersList =
+          appOptions['autoprefixer'].overrideBrowsersList;
       } else if (this.project.targets) {
         browserOptions.overrideBrowsersList = this.project.targets.browsers;
       }
     }
 
-
     this.options = Object.assign(
       {
-        enabled: true
+        enabled: true,
       },
       browserOptions,
       this.app.options.autoprefixer || {}
@@ -43,11 +46,11 @@ module.exports = {
     delete this.options.enabled;
   },
 
-  postprocessTree: function(type, tree) {
+  postprocessTree: function (type, tree) {
     if (this.enabled && treesToProcess.includes(type)) {
       tree = new Autoprefixer(tree, this.options);
     }
 
     return tree;
-  }
+  },
 };

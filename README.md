@@ -1,9 +1,18 @@
-# Autoprefixer for Ember CLI [![Build Status](https://travis-ci.org/kimroen/ember-cli-autoprefixer.svg?branch=master)](https://travis-ci.org/kimroen/ember-cli-autoprefixer)
+# Autoprefixer for Ember CLI [![Build Status](https://github.com/kimroen/ember-cli-autoprefixer/actions/workflows/ci.yml/badge.svg)](https://github.com/kimroen/ember-cli-autoprefixer/actions/workflows/ci.yml)
 This addon runs the styles of your Ember CLI-project through
 Autoprefixer.
 
-## Install
-To install, run
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.20 or above
+* Ember CLI v3.20 or above
+* Node.js v12 or above
+
+
+Installation
+------------------------------------------------------------------------------
 
 ```
 ember install ember-cli-autoprefixer
