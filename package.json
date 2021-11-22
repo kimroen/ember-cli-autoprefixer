@@ -33,8 +33,7 @@
     "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
-    "broccoli-autoprefixer": "^9.0.0",
-    "ember-cli-htmlbars": "^5.7.1"
+    "broccoli-autoprefixer": "^9.0.0"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -48,6 +47,7 @@
     "ember-cli": "~3.28.4",
     "ember-cli-babel": "^7.26.6",
     "ember-cli-dependency-checker": "^3.2.0",
+    "ember-cli-htmlbars": "^6.0.0",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.2",
